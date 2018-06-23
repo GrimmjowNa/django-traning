@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from django.template import Context, loader
 
 def index(request):
-    context = Context({
+    context = {
             'message': 'Hello word'
-        })
+        }
     return render(request, 'index.html', context)
