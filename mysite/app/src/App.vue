@@ -1,12 +1,25 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="app">
+        <Menu/>
+        <!-- <div id="nav">
+            <router-link to="/">Home</router-link> |
+            <router-link to="/about">About</router-link>
+        </div> -->
+        <router-view name="menu"/>
     </div>
-    <router-view/>
-  </div>
 </template>
+
+<script>
+// @ is an alias to /src
+import Menu from '@/components/Menu.vue'
+
+export default {
+  name: 'app',
+  components: {
+    Menu
+  }
+}
+</script>
 
 <style>
 #app {
@@ -15,6 +28,5 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
