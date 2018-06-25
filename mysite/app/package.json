@@ -22,7 +22,7 @@
     "vue-template-compiler": "^2.5.16"
   },
   "eslintConfig": {
-    "root": true,
+    "root": false,
     "env": {
       "node": true
     },
