@@ -48,26 +48,18 @@
                 <div id="slideTop" class="carousel slide" data-ride="carousel">
                   <!-- 指示符 -->
                   <ul class="carousel-indicators">
-                    <li data-target="#slideTop" data-slide-to="0" class="active"></li>
-                    <li data-target="#slideTop" data-slide-to="1"></li>
-                    <li data-target="#slideTop" data-slide-to="2"></li>
+                    <li data-target="#slideTop" v-if="index==0" v-bind:data-slide-to="index" v-for="(silder, index) in silders"></li>
+                    <li data-target="#slideTop" v-else v-bind:data-slide-to="index"></li>
                   </ul>
                   <!-- 轮播图片 -->
                   <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <h1>Silder1</h1>
-                        <p>Silder1</p>
-                      <!-- <img src="https://static.runoob.com/images/mix/img_fjords_wide.jpg"> -->
+                    <div style="background-image: url(https://static.runoob.com/images/mix/img_fjords_wide.jpg)" class="carousel-item active" v-if="index == 0" v-for="(silder, index) in silders">
+                        <h1>{{ silder.title }}</h1>
+                        <p>{{ silder.desc }}</p>
                     </div>
-                    <div class="carousel-item">
-                        <h1>Silder2</h1>
-                        <p>Silder2</p>
-                      <!-- <img src="https://static.runoob.com/images/mix/img_nature_wide.jpg"> -->
-                    </div>
-                    <div class="carousel-item">
-                        <h1>Silder3</h1>
-                        <p>Silder3</p>
-                      <!-- <img src="https://static.runoob.com/images/mix/img_mountains_wide.jpg"> -->
+                    <div style="background-image: url(https://static.runoob.com/images/mix/img_fjords_wide.jpg)" class="carousel-item" v-else>
+                        <h1>{{ silder.title }}</h1>
+                        <p>{{ silder.desc }}</p>
                     </div>
                   </div>
                   <!-- 左右切换按钮 -->
@@ -95,13 +87,15 @@
 
 <script>
 import Content from './data/Content.js'
+import Silder from './data/Silder.js'
 
 export default {
   name: 'app',
   data: function() {
     let index = Math.floor(Math.random()*Content.length)
     return {
-      'content': Content[index]
+      'content': Content[index],
+      'silders': Silder,
     }
   }
 }
@@ -116,5 +110,8 @@ export default {
 
   .carousel-item {
       height: 350px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
   }
 </style>
