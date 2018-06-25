@@ -18,12 +18,21 @@
               </div>
             </div>
           </div>
-          <div class="navbar navbar-dark bg-dark box-shadow">
+          <div class="navbar navbar-expand-lg navbar-dark bg-dark box-shadow">
             <div class="container d-flex justify-content-between">
-              <a href="#" class="navbar-brand d-flex align-items-center">
-                <strong>Nick</strong>
-              </a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <router-link to="/" class="navbar-brand d-flex align-items-center nav-link">
+                    <strong>Home</strong>
+                  </router-link>
+                </li>
+                <li class="nav-item">
+                  <router-link to="/task" class="navbar-brand d-flex align-items-center nav-link">
+                    <strong>Task</strong>
+                  </router-link>
+                </li>
+              </ul>
+              <button class="navbar-toggler" style="display: block" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
             </div>
@@ -66,40 +75,7 @@
                 </div>
             </section>
           <div class="album py-5 bg-light">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="card mb-4 box-shadow">
-                    <img class="card-img-top" data-src="" alt="" style="height: 225px; width: 100%; display: block;" src="" data-holder-rendered="true">
-                    <div class="card-body">
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                        </div>
-                        <small class="text-muted">9 mins</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="card mb-4 box-shadow">
-                    <img class="card-img-top" data-src="" alt="" src="" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
-                    <div class="card-body">
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                        </div>
-                        <small class="text-muted">9 mins</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <router-view />
           </div>
         </main>
         <footer class="text-muted">

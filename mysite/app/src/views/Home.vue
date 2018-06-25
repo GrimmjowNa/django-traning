@@ -1,17 +1,14 @@
 <template>
-    <div class="home">
-        <img src="../assets/logo.png">
+    <div class="container">
+        <!-- <img src="../assets/logo.png"> -->
+        hello this is home page
     </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Menu from '@/components/Menu.vue'
 
 export default {
-  name: 'home',
-  components: {
-    Menu
-  }
+  name: 'home'
 }
 </script>
