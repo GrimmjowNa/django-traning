@@ -1,33 +1,132 @@
 <template>
     <div id="app">
-        <Menu/>
-        <!-- <div id="nav">
-            <router-link to="/">Home</router-link> |
-            <router-link to="/about">About</router-link>
-        </div> -->
-        <router-view name="menu"/>
-        <router-view name="default"/>
+                <header>
+          <div class="collapse bg-dark" id="navbarHeader">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-8 col-md-7 py-4">
+                  <h4 class="text-muted">卷首</h4>
+                  <p class="text-white">生活不能等待别人来安排，要自己去争取和奋斗；而不论其结果是喜是悲，但可以慰藉的是，你总不枉在这世界上活了一场。有了这样的认识，你就会珍重生活，而不会玩世不恭；同时，也会给人自身注入一种强大的内在力量。</p>
+                </div>
+                <div class="col-sm-4 offset-md-1 py-4">
+                  <h4 class="text-white">Contact</h4>
+                  <ul class="list-unstyled">
+                    <li><a class="text-white" href="https://github.com/GrimmjowNa/" target="_blank">Git Hub</a></li>
+                    <li><a class="text-white" href="mailto:naguangqing@qq.com">Email me</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="navbar navbar-dark bg-dark box-shadow">
+            <div class="container d-flex justify-content-between">
+              <a href="#" class="navbar-brand d-flex align-items-center">
+                <strong>Nick</strong>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </div>
+        </header>
+        <main role="main">
+            <section>
+                <div id="slideTop" class="carousel slide" data-ride="carousel">
+                  <!-- 指示符 -->
+                  <ul class="carousel-indicators">
+                    <li data-target="#slideTop" data-slide-to="0" class="active"></li>
+                    <li data-target="#slideTop" data-slide-to="1"></li>
+                    <li data-target="#slideTop" data-slide-to="2"></li>
+                  </ul>
+                  <!-- 轮播图片 -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <h1>Silder1</h1>
+                        <p>Silder1</p>
+                      <!-- <img src="https://static.runoob.com/images/mix/img_fjords_wide.jpg"> -->
+                    </div>
+                    <div class="carousel-item">
+                        <h1>Silder2</h1>
+                        <p>Silder2</p>
+                      <!-- <img src="https://static.runoob.com/images/mix/img_nature_wide.jpg"> -->
+                    </div>
+                    <div class="carousel-item">
+                        <h1>Silder3</h1>
+                        <p>Silder3</p>
+                      <!-- <img src="https://static.runoob.com/images/mix/img_mountains_wide.jpg"> -->
+                    </div>
+                  </div>
+                  <!-- 左右切换按钮 -->
+                  <a class="carousel-control-prev" href="#slideTop" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </a>
+                  <a class="carousel-control-next" href="#slideTop" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </a>
+                </div>
+            </section>
+          <div class="album py-5 bg-light">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" data-src="" alt="" style="height: 225px; width: 100%; display: block;" src="" data-holder-rendered="true">
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        </div>
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" data-src="" alt="" src="" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        </div>
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer class="text-muted">
+          <div class="container">
+            <p class="float-right">
+              <a href="#" class="text-muted">Back to top</a>
+            </p>
+          </div>
+        </footer>
     </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import Menu from '@/components/Menu.vue'
 
 export default {
-  name: 'app',
-  components: {
-    Menu
-  }
+  name: 'app'
 }
 </script>
 
 <style>
-/*#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}*/
+  .carousel.slide {
+      background-color: slategray;
+      text-align: center;
+      color: #aaa;
+  }
+
+  .carousel-item {
+      height: 350px;
+  }
 </style>
