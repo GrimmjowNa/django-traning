@@ -6,7 +6,7 @@
               <div class="row">
                 <div class="col-sm-8 col-md-7 py-4">
                   <h4 class="text-muted">卷首</h4>
-                  <p class="text-white">生活不能等待别人来安排，要自己去争取和奋斗；而不论其结果是喜是悲，但可以慰藉的是，你总不枉在这世界上活了一场。有了这样的认识，你就会珍重生活，而不会玩世不恭；同时，也会给人自身注入一种强大的内在力量。</p>
+                  <p class="text-white">{{ content }}</p>
                 </div>
                 <div class="col-sm-4 offset-md-1 py-4">
                   <h4 class="text-white">Contact</h4>
@@ -94,9 +94,16 @@
 </template>
 
 <script>
+import Content from './data/Content.js'
 
 export default {
-  name: 'app'
+  name: 'app',
+  data: function() {
+    let index = Math.floor(Math.random()*Content.length)
+    return {
+      'content': Content[index]
+    }
+  }
 }
 </script>
 
