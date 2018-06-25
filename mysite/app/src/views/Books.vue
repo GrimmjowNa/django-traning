@@ -3,11 +3,10 @@
       <div class="row">
         <div class="col-md-4" v-for="(item, index) in items">
           <div class="card mb-4 box-shadow">
-            <!-- <img class="card-img-top" data-src="" alt="" style="height: 225px; width: 100%; display: block;" src="" data-holder-rendered="true"> -->
+            <img class="card-img-top" data-src="" alt="" style="height: 225px; width: 100%; display: block;" src="" data-holder-rendered="true">
             <div class="card-body">
               <h5 class="card-title">{{ item.title }}</h5>
-              <p class="card-text">{{ item.desc }}desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc </p>
-              <span v-for="label in item.labels" class="badge badge-dark">{{ label }}</span> 
+              <p class="card-text">{{ item.desc }}</p>
               <a href="javascript:void(0)" class="card-link float-right" @click="showDetail($event, item)" >View</a>
             </div>
           </div>
@@ -40,7 +39,7 @@ import Data from '../data/Home.js'
 import $ from 'jquery/dist/jquery.js'
 
 export default {
-  name: 'home',
+  name: 'books',
   data: function() {
     return Data
   },
@@ -65,9 +64,5 @@ export default {
     height: 96px;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-.badge {
-  margin-right: 5px;
 }
 </style>

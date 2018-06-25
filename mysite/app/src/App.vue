@@ -27,6 +27,11 @@
                   </router-link>
                 </li>
                 <li class="nav-item">
+                  <router-link to="/books" class="navbar-brand d-flex align-items-center nav-link">
+                    <strong>Books</strong>
+                  </router-link>
+                </li>
+                <li class="nav-item">
                   <router-link to="/task" class="navbar-brand d-flex align-items-center nav-link">
                     <strong>Task</strong>
                   </router-link>
