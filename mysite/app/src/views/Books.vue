@@ -31,7 +31,6 @@
     </div>
 </template>
 
-
 <script>
 // @ is an alias to /src
 import Data from '../data/Home.js'
