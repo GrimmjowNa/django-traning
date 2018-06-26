@@ -105,7 +105,7 @@ export default {
   .carousel.slide {
       background-color: slategray;
       text-align: center;
-      color: #aaa;
+      color: #fff;
   }
 
   .carousel-item {

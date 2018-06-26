@@ -8,7 +8,7 @@
               <h5 class="card-title">{{ item.title }}</h5>
               <p class="card-text">{{ item.desc }}</p>
               <span v-for="label in item.labels" class="badge badge-dark">{{ label }}</span> 
-              <a href="javascript:void(0)" class="card-link float-right" @click="showDetail($event, item)" >View</a>
+              <a href="javascript:void(0)" class="card-link float-right" @click="showDetail(item)" >View</a>
             </div>
           </div>
         </div>
@@ -49,9 +49,13 @@ export default {
     }
   },
   methods: {
-    showDetail: function(event, item) {
+    showDetail: function(item) {
         $('#myModal .modal-title').html(item.title)
-        $('#myModal .modal-body iframe').attr('src', item.link)
+        if (item.link) {
+          $('#myModal .modal-body iframe').attr('src', item.link)
+        } else {
+          $('#myModal .modal-body iframe').attr('src', 'data/0.html')
+        }
         $('#myModal').modal('show')
     }
   }
