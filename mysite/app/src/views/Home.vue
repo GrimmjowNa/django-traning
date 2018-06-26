@@ -1,13 +1,23 @@
 <template>
     <div class="container">
       <div class="row">
-        <div class="col-md-4" v-for="(item, index) in items">
+        <!-- <div class="col-md-4" v-for="(item, index) in items">
           <div class="card mb-4 box-shadow">
-            <!-- <img class="card-img-top" data-src="" alt="" style="height: 225px; width: 100%; display: block;" src="" data-holder-rendered="true"> -->
             <div class="card-body">
               <h5 class="card-title">{{ item.title }}</h5>
               <p class="card-text">{{ item.desc }}</p>
               <span v-for="label in item.labels" class="badge badge-dark">{{ label }}</span> 
+              <a href="javascript:void(0)" class="card-link float-right" @click="showDetail(item)" >View</a>
+            </div>
+          </div>
+        </div> -->
+        <div class="col-md-12" v-for="(item, index) in items" style="margin-bottom: 10px;">
+          <div class="card mb-12 box-shadow">
+            <div class="card-body">
+              <span class="h5 card-title">
+                {{ item.title }}
+              </span>
+              <span v-for="label in item.labels" class="badge badge-dark">{{ label }}</span>
               <a href="javascript:void(0)" class="card-link float-right" @click="showDetail(item)" >View</a>
             </div>
           </div>
