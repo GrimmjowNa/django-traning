@@ -6,8 +6,7 @@ export default [
         labels: ['PostgreSQL'],
     },
     {
-        title: 'title1',
-        desc: 'this is desc1',
-        label: 'test hello',
-        labels: ['test', 'hello'],
+        title: 'Python循环引用',
+        desc: '',
+        labels: ['python'],
     }]
